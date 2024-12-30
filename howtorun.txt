@@ -1,0 +1,8 @@
+Install in yout local:
+pip install google-generativeai
+pip install ipython
+pip install python-dotenv
+
+in modifthisfile.env file input your API key 
+GOOGLE_API_KEY=YOUR_API_KEY
+then save it as .env
