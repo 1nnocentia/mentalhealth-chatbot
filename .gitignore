@@ -1,0 +1,7 @@
+.env
+__pycache__/
+huggingface/
+analyze_sentiment.py 
+generate_response.py
+test main.py
+main test.py
