@@ -1,5 +1,6 @@
 from mentalhealth_chatbot import Chatbot
 import textwrap
+from sos import play_sos_and_display_contacts
 
 InnerCalm = []
 mood = None
@@ -22,10 +23,11 @@ while True:
     
     print("2. Chatbot")
     print("3. Mood Tracker")
-    print("4. Exit")
+    print("4. SOS Emergency")
+    print("5. Exit")
     
     try:
-        pilihan = int(input("Select Menu (1-4): "))
+        pilihan = int(input("Select Menu (1-5): "))
     except ValueError:
         print("Input not valid. Number only.")
         continue
@@ -124,9 +126,13 @@ while True:
                 print("You're not assign any mood. It's Okay. Maybe next time.")
         else:
             print("Please LogIn before using this feature.")
-
-    # 4. Exit
+    
+    # 4. SOS
     elif pilihan == 4:
+        sos = play_sos_and_display_contacts()
+
+    # 5. Exit
+    elif pilihan == 5:
         if current_user:
             print(f"See you, {current_user}!")
         else:
